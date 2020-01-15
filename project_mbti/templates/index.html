@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+body{
+	background-image: url("16.jpg");
+}
+	.jumbotron{
+		background-image: url("/static/images/download.jpg");
+		background-repeat: no-repeat;
+  		background-size: 1400px 200px;
+  		font-family: sans-serif;
+  	color: white;
+  	  color: white;
+  text-shadow: 
+    1px 1px 8px black, 
+    .5em -.5em 0 gold, 
+    1em .4em 0 orange, 
+    1.5em .4em 10vw orange, 
+    0 0 10vw gold;
+}
+
+footer{
+  background-color: #202060;
+}
+
+	textarea{
+
+		background-color:transparent;
+		border: 3px double; 
+	}
+  h5,h2 {
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.button5 {border-radius: 50%;}
+.row{
+	background-image: url("/static/images/images.jpg");
+	background-repeat: no-repeat;
+  	background-size: 1400px 600px;
+}
+
+.alert{
+  font-size: 20px;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+</style>
+
+</head>
+
+<body style="background-color: #FDFEFE  ;">
+
+	<div class="jumbotron text-center">
+  <h1 style="font-size: 60px ; color: white ">The Myers Briggs Type Indicator</h>
+  
+
+
+</div>
+  <div class="row" style="margin-top: -10px;">
+
+    <div class="col-sm-8">
+    	<center>
+
+<p>
+	<h2 style="color: black  ;">Enter Your Twitter UserID</h2>
+	<div class="input_detail">
+	<form action="{{ url_for('output')}}" method ="post">
+    
+	<textarea  placeholder="Enter ID" name="text" rows="2" cols="40"> </textarea>
+	<br> 
+	
+	<input type="submit" style="size: 100px" value="submit" name="submit" class="button button5">
+
+	<br>
+	<h5>Your personality is :-</h5>
+	
+	<div class = "alert alert-info" style="min-height:40px; ">
+	<strong>{{ str_ }}</strong>
+  </div>
+  
+
+	</form></p></center></div>
+	<div class="col-sm-3">
+<p>
+	<div class="well well-lg">
+    <p >
+    The Myers Briggs Type Indicator (or MBTI for short) is a personality type system that divides everyone into 16 distinct personality types across 4 axis:</p>
+    <ul style="list-style-type:disc;">
+  	<li>Introversion (I) – Extroversion (E)</li>
+  	<li>Intuition (N) – Sensing (S)</li>
+  	<li>Thinking (T) – Feeling (F)</li>
+	<li>Judging (J) – Perceiving (P)</li>
+	</ul> 
+	<p>So for example, someone who prefers introversion, intuition, thinking and perceiving would be labelled an INTP in the MBTI system</p>
+    </div></p>
+     </div>
+  </div>
+    <div>
+  <center>
+  <img class ="mbti_chart"  src="/static/images/16.jpg" alt="user image" height="60%" width="80%">
+  </center>
+
+ </div>
+
+  <footer style="color: #999999;">
+    <center>Minor Project On MBTI
+			From
+  			Bhavya jodawat
+  			Dhruvin Panchal & Anshul Mehta
+        <br> Contect : 9413431811
+        <br> Email : bjodawat1@gmail.com
+		<br> Global Institute Of Tecnology Jaipur
+        </center>
+  	 </footer>
+	
+	
+
+</body>
+</html>
+
+   
+
